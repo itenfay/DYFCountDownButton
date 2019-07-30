@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9IG-La-7Fb">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xHQ-PK-O9G"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ctb-0W-d6U"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eLj-7H-TRe">
+                                <rect key="frame" x="30" y="188" width="354" height="520"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NjW-Ha-mnw" customClass="DYFCountDownButton">
+                                        <rect key="frame" x="77" y="10" width="200" height="40"/>
+                                        <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="AsN-Kl-Hc6"/>
+                                            <constraint firstAttribute="width" constant="200" id="EWL-iP-fgQ"/>
+                                        </constraints>
+                                        <state key="normal" title="获取验证码">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="getMsgVerifiedCode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dyd-8k-XZz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oez-oA-iuE" customClass="DYFCountDownButton">
+                                        <rect key="frame" x="77" y="70" width="200" height="40"/>
+                                        <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="6ll-tu-JhW"/>
+                                            <constraint firstAttribute="width" constant="200" id="ejb-FX-WhM"/>
+                                        </constraints>
+                                        <state key="normal" title="提前终止">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="endCountDown:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9a6-ow-yCi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="oez-oA-iuE" firstAttribute="top" secondItem="NjW-Ha-mnw" secondAttribute="bottom" constant="20" id="GZG-Hj-EK4"/>
+                                    <constraint firstItem="NjW-Ha-mnw" firstAttribute="centerX" secondItem="eLj-7H-TRe" secondAttribute="centerX" id="L1g-H1-A5G"/>
+                                    <constraint firstItem="NjW-Ha-mnw" firstAttribute="top" secondItem="eLj-7H-TRe" secondAttribute="top" constant="10" id="Wih-jk-c8x"/>
+                                    <constraint firstItem="oez-oA-iuE" firstAttribute="centerX" secondItem="eLj-7H-TRe" secondAttribute="centerX" id="Y99-HB-ZQQ"/>
+                                    <constraint firstAttribute="height" constant="520" id="aJA-RJ-aaN"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="eLj-7H-TRe" secondAttribute="trailing" constant="10" id="Smi-6P-hLh"/>
+                            <constraint firstItem="eLj-7H-TRe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aQx-iY-J0k"/>
+                            <constraint firstItem="eLj-7H-TRe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="f6K-a8-Uik"/>
+                            <constraint firstItem="eLj-7H-TRe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="xCJ-ND-mam"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Aoo-VR-L8v"/>
+                    <connections>
+                        <outlet property="m_button" destination="NjW-Ha-mnw" id="gfl-oz-wVc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="95.758928571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VkO-Mz-0YU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9IG-La-7Fb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Tsc-n1-Dyw">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Jw6-bl-Kfh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="958-M9-lF1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="95.758928571428569"/>
+        </scene>
+    </scenes>
+</document>
