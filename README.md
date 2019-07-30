@@ -15,7 +15,7 @@
 
 1. 实例化与布局
 
-  直接在storyboard绘制，设置约束，省去手工代码。
+    直接在storyboard绘制，设置约束，省去手工代码。
 
 2. 配置
 
@@ -48,7 +48,7 @@
 
 4. 结束倒计时
 
-  当任务失败 或者 你需要提前终止倒计时，你调用此方法。(when the task fails or you need to terminate the countdown ahead of time, you call it.)
+    当任务失败 或者 你需要提前终止倒计时，你调用此方法。(when the task fails or you need to terminate the countdown ahead of time, you call it.)
   
 ```ObjC
 [self.m_button endCountDown];
