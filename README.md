@@ -11,6 +11,12 @@
 
 一个倒计时按钮，操作简单好用。(A countdown button for iOS. The operation is simple and easy to use.)
 
+## 效果图
+
+<div align=left>
+<img src="https://github.com/dgynfi/DYFCountDownButton/raw/master/images/CountDownButtonPreview.gif" width="40%" />
+</div>
+
 ## 使用说明
 
 1. 实例化与布局
@@ -20,7 +26,7 @@
 2. 配置
 
 ```ObjC
-- (IBAction)getMsgVerifiedCode:(id)sender {
+- (void)configureCountDownButton {
     [self.m_button configureWithDuration:20 countDownStart:^(DYFCountDownButton *_sender, NSInteger startValue) {
 
         NSString *title = [NSString stringWithFormat:@"%zis后重新发送", startValue];
@@ -43,7 +49,9 @@
 3. 开始倒计时
 
 ```ObjC
-[self.m_button startCountDown];
+- (IBAction)getMsgVerifiedCode:(id)sender {
+    [self.m_button startCountDown];
+}
 ```
 
 4. 结束倒计时
@@ -51,5 +59,11 @@
     当任务失败 或者 你需要提前终止倒计时，你调用此方法。(when the task fails or you need to terminate the countdown ahead of time, you call it.)
   
 ```ObjC
-[self.m_button endCountDown];
+- (IBAction)endCountDown:(id)sender {
+    [self.m_button endCountDown];
+}
 ```
+
+## Sample Codes
+
+- [Sample Codes Gateway](https://github.com/dgynfi/DYFCountDownButton/blob/master/Basic%20Files/ViewController.m)

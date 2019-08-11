@@ -18,9 +18,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self configureCountDownButton];
 }
 
-- (IBAction)getMsgVerifiedCode:(id)sender {
+- (void)configureCountDownButton {
     [self.m_button configureWithDuration:20 countDownStart:^(DYFCountDownButton *_sender, NSInteger startValue) {
         
         NSString *title = [NSString stringWithFormat:@"%zis后重新发送", startValue];
@@ -37,7 +38,9 @@
         [_sender setTitle:title forState:UIControlStateNormal];
         
     }];
-    
+}
+
+- (IBAction)getMsgVerifiedCode:(id)sender {
     [self.m_button startCountDown];
 }
 

@@ -65,7 +65,7 @@ typedef void(^CountDownEndBlock     )(DYFCountDownButton *_sender);
     
     !self.countDownStartBlock ?: self.countDownStartBlock(self, _startValue);
     
-    self.timer = [NSTimer timerWithTimeInterval:1
+    self.timer = [NSTimer timerWithTimeInterval:1.f
                                          target:self
                                        selector:@selector(refresh)
                                        userInfo:nil
@@ -82,7 +82,6 @@ typedef void(^CountDownEndBlock     )(DYFCountDownButton *_sender);
         [self.timer invalidate];
         self.timer   = nil;
         
-        _restValue   = _startValue;
         !self.countDownEndBlock ?: self.countDownEndBlock(self);
         self.enabled = YES;
     }
@@ -93,7 +92,7 @@ typedef void(^CountDownEndBlock     )(DYFCountDownButton *_sender);
         [self.timer invalidate];
         self.timer   = nil;
         
-        _restValue   = _startValue;
+        _restValue   = 0;
         !self.countDownEndBlock ?: self.countDownEndBlock(self);
         self.enabled = YES;
     }
