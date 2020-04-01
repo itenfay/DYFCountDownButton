@@ -4,7 +4,7 @@
 
 ## DYFCountDownButton
 
-&emsp; 一个倒计时按钮，操作简单好用。(A countdown button for iOS, the operation is simple and easy to use.)
+一个倒计时按钮，操作简单好用。(A countdown button for iOS, the operation is simple and easy to use.)
 
 ## Group (ID:614799921)
 
@@ -22,7 +22,7 @@
 
 - 实例化与布局
 
-&emsp; 直接在 storyboard 或在 xib 绘制，设置约束，省去手工代码。
+直接在 storyboard 或在 xib 绘制，设置约束，省去手工代码。
 
 - 配置
 
@@ -56,7 +56,7 @@
 
 - 结束倒计时
 
-&emsp; 当任务失败或者你需要提前终止倒计时，调用此方法。(When the task fails or you need to terminate the countdown ahead of time, you call this method.)
+当任务失败或者需要提前终止倒计时，调用此方法。(When the task fails or the countdown needs to be terminated in advance, you call this method.)
 
 ```ObjC
 - (IBAction)endCountDown:(id)sender {
